@@ -72,38 +72,37 @@ class Bankservice extends Bank
 public class Abstrct {
 
 	public static void main(String[] args) {
-		       	 int ch;
-		       	String name="union bank of india";
-		    	String ifsc="ib5005";
-					Bankservice b=new Bankservice();
-					int  e='y';
-					System.out.println("Bank :"+name+"                     IFSC code :"+ifsc);
-					System.out.println("*****************************************************************");
-					while(e=='y')
-					{
+		int ch;
+		String name="union bank of india";
+		String ifsc="ib5005";
+		Bankservice b=new Bankservice();
+		int  e='y';
+		System.out.println("Bank :"+name+"                     IFSC code :"+ifsc);
+		System.out.println("*****************************************************************");
+		while(e=='y')
+		{
+		
+		System.out.println("\n1.Deposite :");
+		System.out.println("2.Withdraw :");
+		System.out.println("3.check balance :\n\n");
+		
+			System.out.println("Enter your choice :");
+			Scanner s2=new Scanner(System.in);
+			ch=s2.nextInt();
+		
+		switch(ch){
+			case 1: b.Deposited();
+			break;
+			case 2: b.Withdraw();
+			break;
+			case 3: b.checkbal();
+			e='n';
+			break;
+			default :
+			System.out.println("Invalid choice!!");
+			break;
+		}
 					
-					System.out.println("\n1.Deposite :");
-					System.out.println("2.Withdraw :");
-					System.out.println("3.check balance :\n\n");
+	}
 					
-						System.out.println("Enter your choice :");
-						Scanner s2=new Scanner(System.in);
-						ch=s2.nextInt();
-					
-					switch(ch)
-					{
-					case 1: b.Deposited();
-					break;
-					case 2: b.Withdraw();
-					break;
-					case 3: b.checkbal();
-					e='n';
-					break;
-					default :
-					System.out.println("Invalid choice!!");
-					break;
-					}
-					
-					}
-					
-			}	
+}	
